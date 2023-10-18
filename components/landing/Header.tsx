@@ -4,9 +4,10 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import TranslateIcon from '@mui/icons-material/Translate';
 const Header = () => {
   return (
-    <div className="flex justify-between px-5 py-2 mb-3 items-center sticky top-0 font-bold  bg-orange-400 text-orange-50">
+    <div className="flex justify-between px-5 py-2 mb-3 items-center sticky top-0 font-bold shadow-md  bg-orange-400 text-orange-50">
       <div className="left flex gap-2 justify-center items-center">
         <div className="cursor-pointer">
           <img
@@ -35,6 +36,9 @@ const Header = () => {
           </li>
           <li className="cursor-pointer hover:scale-125">
             <ShoppingCartIcon />
+          </li>
+          <li className="cursor-pointer hover:scale-125">
+            <TranslateIcon />
           </li>
           <li className="cursor-pointer">
             <img

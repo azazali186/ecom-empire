@@ -9,7 +9,7 @@ type ProductSliderProps = {
 
 const ProductSlider: React.FC<ProductSliderProps> = ({ products, title }) => {
   return (
-    <div className="px-5 pb-5 flex flex-col gap-4">
+    <div className="px-5 pb-5 flex flex-col gap-4 my-3">
       <p className="text-center text-2xl font-bold text-orange-400">
         {title}
       </p>

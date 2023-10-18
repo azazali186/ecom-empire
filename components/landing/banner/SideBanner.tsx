@@ -12,7 +12,7 @@ type SideBannerProps = {
 const SideBanner: React.FC<SideBannerProps> = ({images, autoplayInterval = 3000, styles ={} }) => {
 
   return (
-    <div className='w-[15%] h-[20vh] bg-orange-100 flex items-center justify-center overflow-hidden shadow-lg' style={styles}>
+    <div className='w-[15%] bg-orange-100 flex items-center justify-center overflow-hidden shadow-lg' style={styles}>
         <Slider images={images} autoplayInterval={autoplayInterval} />
     </div>
   )
