@@ -1,0 +1,22 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.scrollable-container {
+    @apply overflow-y-auto;
+}
+
+.scrollable-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-container {
+    scrollbar-width: none; /* Firefox 64+ */
+}
+
+
+.scrollable-container {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
