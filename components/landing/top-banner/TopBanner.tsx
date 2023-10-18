@@ -29,9 +29,9 @@ const TopBanner = () => {
     ]
   return (
     <div className="flex justify-between items-center w-full px-1 mb-2">
-      <SideBanner images={leftImages} autoplayInterval={2200} />
-      <Banner images={mainImages}  autoplayInterval={2800} styles={{ width: '69.5%' }}/>
-      <SideBanner images={rightImages}  autoplayInterval={2200}/>
+      <SideBanner images={leftImages} autoplayInterval={2200} styles={{ height: "25vh"}} />
+      <Banner images={mainImages}  autoplayInterval={2800} styles={{ width: '69.5%', height: "25vh" }}/>
+      <SideBanner images={rightImages}  autoplayInterval={2200} styles={{ height: "25vh"}}/>
     </div>
   );
 };

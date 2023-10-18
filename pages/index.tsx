@@ -1,44 +1,52 @@
+import { categoryData } from "@/components/data/categoryData";
+import { newArrivals, topProducts } from "@/components/data/productData";
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import Banner from "@/components/landing/banner/Banner";
 import SideBanner from "@/components/landing/banner/SideBanner";
 import TopBanner from "@/components/landing/top-banner/TopBanner";
+import { Product } from "@/components/product/ProductCard";
+import ProductSlider from "@/components/product/ProductSlider";
+import Slide from "@/components/product/Slide";
 import React from "react";
 
 const index = () => {
-
   const mainImages = [
     "https://picsum.photos/1980/250?random=10.webp",
-    "https://picsum.photos/1980/250?random=20.webp",
-    "https://picsum.photos/1980/250?random=30.webp",
-    "https://picsum.photos/1980/250?random=40.webp",
-    "https://picsum.photos/1980/250?random=50.webp",
-    "https://picsum.photos/1980/250?random=60.webp",
-]
+  ];
+
+  
   return (
     <div className=" bg-orange-50  h-screen">
       <Header />
-
       <div className="scrollable-container h-[90vh]">
         <TopBanner />
-        <div>New Arrivals</div>
+        <ProductSlider products={newArrivals} title={"New Arrivals"} />
         <div className="flex justify-between items-center w-full px-1 mb-2">
-          <Banner images={mainImages} styles={{ width: '100%' }} autoplayInterval={2000}/>
+          <Banner
+            images={mainImages}
+            styles={{ width: "100%", height: "8vh" }}
+            autoplayInterval={2000}
+          />
         </div>
-        <div>Top Deals</div>
+        <ProductSlider products={topProducts} title={"Top Deals"} />
         <div className="flex justify-between items-center w-full px-1 mb-2">
-          <SideBanner images={[]} />
-          <Banner images={[]} styles={{ width: '69.5%' }} />
-          <SideBanner images={[]} />
+        <Banner
+            images={mainImages}
+            styles={{ width: "100%", height: "8vh" }}
+            autoplayInterval={2000}
+          />
         </div>
-        <div>Popular Products</div>
+        <ProductSlider products={newArrivals} title={"Popular Products"} />
         <div className="flex justify-between items-center w-full px-1 mb-2">
-          <SideBanner images={[]} />
-          <Banner images={[]} styles={{ width: '69.5%' }}/>
-          <SideBanner images={[]} />
+        <Banner
+            images={mainImages}
+            styles={{ width: "100%", height: "8vh" }}
+            autoplayInterval={2000}
+          />
         </div>
-        <div>Top Categories</div>
-
+        <div></div>
+        <ProductSlider products={categoryData} title={"Top Categories"} />
       </div>
 
       <Footer />
