@@ -37,9 +37,9 @@ export const categoryData: Product[] = [
         name: "Category 7",
         imageUrl: "https://picsum.photos/1980/720?random=7.webp"
     },
-    {
+    /* {
         id: 8,
         name: "Category 8",
         imageUrl: "https://picsum.photos/1980/720?random=8.webp"
-    }
+    } */
 ]
