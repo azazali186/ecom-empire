@@ -3,7 +3,8 @@
 // pages/Slider.tsx
 
 import { useEffect, useState } from "react";
-
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 type SliderProps = {
   images: string[];
   autoplayInterval?: number; // in milliseconds
@@ -44,13 +45,13 @@ const Slider: React.FC<SliderProps> = ({ images, autoplayInterval = 3000 }) => {
         onClick={prevSlide}
         className="absolute bottom-3 left-0 p-4 text-white"
       >
-        Prev
+        <ArrowLeftIcon />
       </button>
       <button
         onClick={nextSlide}
         className="absolute bottom-3 right-0 p-4 text-white"
       >
-        Next
+        <ArrowRightIcon />
       </button>
     </div>
   );
