@@ -1,20 +1,26 @@
+import MainLayout from "@/components/layouts";
 import React from "react";
 
 const becomeASeller = () => {
   return (
-    <div className="shadow-md px-48 py-10 text-orange-400 bg-orange-50 h-screen">
+    <MainLayout>
+      <div className="mx-52">
       <h1 className="text-2xl font-bold text-center mb-5">
         Become a Seller on Cambodia&apos;s No. 1 Multi-Vendor Ecommerce
         Platform!
       </h1>
 
-      <h1 className="text-2xl font-bold text-center mb-5">🌟 Unlock Infinite Opportunities 🌟</h1>
+      <h1 className="text-2xl font-bold text-center mb-5">
+        🌟 Unlock Infinite Opportunities 🌟
+      </h1>
 
-      <h3 className="text-l font-bold text-center mb-5">
+      <div className="text-l flex justify-center font-bold mb-5">
+        <p className="w-[50%]">
         Welcome to the leading multi-vendor ecommerce platform in Cambodia.
         Whether you&apos;re an established brand or a budding entrepreneur, our
         platform promises unprecedented reach and growth for your business.
-      </h3>
+        </p>
+      </div>
 
       <h1 className="text-2xl font-bold text-center mb-5">Why Join Us?</h1>
       <ul className="text-l  mb-5">
@@ -57,7 +63,8 @@ const becomeASeller = () => {
           </p>
         </li>
       </ul>
-    </div>
+      </div>
+    </MainLayout>
   );
 };
 

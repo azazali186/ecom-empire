@@ -6,6 +6,7 @@ import Header from "@/components/landing/Header";
 import Banner from "@/components/landing/banner/Banner";
 import SideBanner from "@/components/landing/banner/SideBanner";
 import TopBanner from "@/components/landing/top-banner/TopBanner";
+import MainLayout from "@/components/layouts";
 import ProductSlider from "@/components/product/ProductSlider";
 import { Height } from "@mui/icons-material";
 import React from "react";
@@ -16,9 +17,7 @@ const longImageLeft = ["https://picsum.photos/250/1980?random=12.webp"];
 const longImageRight = ["https://picsum.photos/250/1980?random=115.webp"];
 
   return (
-    <div className=" bg-orange-50  h-screen">
-      <Header />
-      <div className="scrollable-container h-[90vh]">
+    <MainLayout>
         <TopBanner />
         <div className="flex px-5">
           <SideBanner images={longImageLeft} styles={{height : "auto"}} sliderStyles={{height: "100%"}}/>
@@ -51,10 +50,7 @@ const longImageRight = ["https://picsum.photos/250/1980?random=115.webp"];
           </div>
           <SideBanner images={longImageRight} styles={{height : "auto"}} sliderStyles={{height: "100%"}}/>
         </div>
-      </div>
-
-      <Footer />
-    </div>
+      </MainLayout>
   );
 };
 
