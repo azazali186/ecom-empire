@@ -8,9 +8,10 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 type SliderProps = {
   images: string[];
   autoplayInterval?: number; // in milliseconds
+  styles?: React.CSSProperties;
 };
 
-const Slider: React.FC<SliderProps> = ({ images, autoplayInterval = 3000 }) => {
+const Slider: React.FC<SliderProps> = ({ images, autoplayInterval = 3000, styles ={} }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -30,7 +31,7 @@ const Slider: React.FC<SliderProps> = ({ images, autoplayInterval = 3000 }) => {
   };
 
   return (
-    <div className="relative w-full h-60 overflow-hidden">
+    <div className="relative w-full h-60 overflow-hidden" style={styles}>
       {images.map((img, index) => (
         <img
           key={index}

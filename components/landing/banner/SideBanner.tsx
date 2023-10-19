@@ -7,13 +7,14 @@ type SideBannerProps = {
     images: string[];
     autoplayInterval?: number;
     styles?: React.CSSProperties;
+    sliderStyles?: React.CSSProperties;
   };
 
-const SideBanner: React.FC<SideBannerProps> = ({images, autoplayInterval = 3000, styles ={} }) => {
+const SideBanner: React.FC<SideBannerProps> = ({images, autoplayInterval = 3000, styles ={}, sliderStyles={} }) => {
 
   return (
     <div className='w-[15%] bg-orange-100 flex items-center justify-center overflow-hidden shadow-lg' style={styles}>
-        <Slider images={images} autoplayInterval={autoplayInterval} />
+        <Slider images={images} autoplayInterval={autoplayInterval} styles={sliderStyles}/>
     </div>
   )
 }

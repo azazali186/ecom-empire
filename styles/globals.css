@@ -1,22 +1,41 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .scrollable-container {
-    @apply overflow-y-auto;
+  @apply overflow-y-auto;
 }
 
 .scrollable-container::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .scrollable-container {
-    scrollbar-width: none; /* Firefox 64+ */
+  scrollbar-width: none; /* Firefox 64+ */
 }
-
 
 .scrollable-container {
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
+.back {
+  display: none;
+}
+
+.flipper:hover > .front {
+  display: none;
+}
+
+.flipper:hover > .back {
+  display: block;
+}
+
+.cart-buy-btn {
+  border-color: rgb(251 146 60);
+  color: rgb(251 146 60);
+}
+.cart-buy-btn:hover {
+    border-color: rgb(251 146 60);
+    color: rgb(251 146 60);
+    background: transparent;
+  }
