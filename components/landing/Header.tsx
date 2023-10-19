@@ -21,7 +21,7 @@ const Header = () => {
         <div className="flex gap-5 justify-center items-center ml-20 ">
           <div className="cursor-pointer hover:scale-125"><Link href={"/auth/login"} >Login</Link></div>
           <div className="cursor-pointer hover:scale-125"><Link href={"/auth/sign-up"} >Sign-up</Link></div>
-          <div className="cursor-pointer hover:scale-125">Become A Seller</div>
+          <div className="cursor-pointer hover:scale-125"><Link href={"/become-a-seller"}>Become A Seller</Link></div>
         </div>
       </div>
       <div className="right">
