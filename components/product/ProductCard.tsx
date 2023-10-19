@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import Image from "next/image";
 // components/ProductCard.tsx
 export type Product = {
   id: number;
@@ -20,10 +21,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="flipper h-full">
       <div className="bg-orange-100 front min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
-        <img
+        <Image
           src={product.imageUrl}
           alt={product.name}
-          className="w-48 h-48 object-cover rounded-t-md"
+          className="w-48 h-48 object-cover rounded-t-md" width="186" height="186"
         />
         <h3 className="text-lg mt-2">{product.name}</h3>
         {product?.price ? (
