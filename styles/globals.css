@@ -35,7 +35,16 @@
   color: rgb(251 146 60);
 }
 .cart-buy-btn:hover {
-    border-color: rgb(251 146 60);
-    color: rgb(251 146 60);
-    background: transparent;
-  }
+  border-color: rgb(251 146 60);
+  color: rgb(251 146 60);
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

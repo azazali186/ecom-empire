@@ -35,11 +35,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         )}
       </div>
       <div className="bg-orange-100 back min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
-        <p className="w-48 flex justify-center items-center h-44 mb-5 text-orange-400 font-bold divide-y-8 overflow-auto">
+        <p className="w-48 flex justify-center items-center h-48 mb-5 text-orange-400 font-bold divide-y-8 overflow-y-auto no-scrollbar">
           {product.desc}
         </p>
         {product.price ? (
-          <div className="flex justify-center items-center gap-2 py-2">
+          <div className="flex justify-center items-center gap-2">
             <Button variant="outlined" className="cart-buy-btn hover:scale-105">
               <AddIcon /> Cart
             </Button>
