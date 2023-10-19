@@ -1,3 +1,4 @@
+import CategorySlider from "@/components/catagory/CategorySlider";
 import { categoryData } from "@/components/data/categoryData";
 import { NewArrivals, TopDeals, PopularProducts } from "@/components/data/productData";
 import Footer from "@/components/landing/Footer";
@@ -46,7 +47,7 @@ const longImageRight = ["https://picsum.photos/250/1980?random=115.webp"];
                 autoplayInterval={2000}
               />
             </div>
-            <ProductSlider products={categoryData} title={"Top Categories"} />
+            <CategorySlider category={categoryData} title={"Top Categories"} />
           </div>
           <SideBanner images={longImageRight} styles={{height : "auto"}} sliderStyles={{height: "100%"}}/>
         </div>

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Product } from '../product/ProductCard'
+import { Category } from '../catagory/CategoryCard'
 
-export const categoryData: Product[] = [
+export const categoryData: Category[] = [
     {
         id: 1,
         name: "Category 1",
