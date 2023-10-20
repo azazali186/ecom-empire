@@ -33,34 +33,40 @@ const Header = () => {
           <div className="cursor-pointer hover:scale-125">
             <Link href={"/auth/sign-up"}>Sign-up</Link>
           </div>
-          <div className="cursor-pointer hover:scale-125">
+          <div className="cursor-pointer hover:scale-125 ">
             <Link href={"/become-a-seller"}>Become A Seller</Link>
           </div>
         </div>
       </div>
       <div className="right">
         <ul className="flex gap-5 justify-center items-center">
-          <li className="cursor-pointer hover:scale-125">
+          <li className="cursor-pointer hover:scale-125 ">
             <LocationOnIcon />
           </li>
-          <li className="cursor-pointer hover:scale-125">
+          <li className="cursor-pointer hover:scale-125 ">
             <Link href={"/wishlist"}>
               <FavoriteIcon />
             </Link>
           </li>
-          <li className="cursor-pointer hover:scale-125">
+          <li className="cursor-pointer hover:scale-125 ">
             <NotificationsIcon />
           </li>
-          <li className="cursor-pointer hover:scale-125">
+          <li className="cursor-pointer hover:scale-125 ">
             <ShoppingCartIcon />
           </li>
-          <li className="cursor-pointer hover:scale-125">
+          <li className="cursor-pointer hover:scale-125 ">
             <TranslateIcon />
           </li>
           <li className="cursor-pointer">
-            <Grid xs display="flex" justifyContent="center" alignItems="center">
-              <Avatar src="https://picsum.photos/seed/picsum/300/300.webp" />
-            </Grid>
+            <div className="flex justify-center items-center">
+            <Image
+              src="https://picsum.photos/seed/picsum/200/300"
+              alt="logo"
+              className="w-[40px] h-[40px] rounded-full"
+              width={40}
+              height={40}
+            />
+            </div>
           </li>
         </ul>
       </div>
