@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import Image from "next/image";
 import Link from "next/link";
 // components/ProductCard.tsx
@@ -13,6 +14,7 @@ export type Product = {
   price?: number;
   imageUrl: string;
   desc?: string;
+  likes?: number;
 };
 
 type ProductCardProps = {
@@ -29,13 +31,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           className="w-48 h-48 object-cover rounded-t-md" width="186" height="186"
         />
         <h3 className="text-lg mt-2">{product.name}</h3>
-        {product?.price ? (
-          <p className="text-orange-400 font-bold">
-            ${product?.price?.toFixed(2)}
+          <p className="text-orange-400 flex justify-between items-center font-bold">
+            <span>${product?.price?.toFixed(2)}</span>
+            <span className="gap-2 flex"><FavoriteIcon />{ product.likes || 0 }</span>
+            
           </p>
-        ) : (
-          ""
-        )}
       </div>
       <div className="bg-orange-100 back min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
         <Link href={`/products/${product.slug.toLowerCase().replaceAll(" ", "-")}`}>
