@@ -1,18 +1,20 @@
+import Link from "next/link";
 import ProductCard, { Product } from "./ProductCard";
 
 type SlideProps = {
   products: Product[];
+  slug: string;
 };
 
-const Slide: React.FC<SlideProps> = ({ products }) => {
+const Slide: React.FC<SlideProps> = ({ products, slug }) => {
   return (
     <div className="flex flex-wrap overflow-x-auto">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
-      <button className="p-4 bg-orange-400 text-orange-50 self-center">
+      <Link href={`/tags/${slug}`} className="p-4 bg-orange-400 text-orange-50 self-center">
         View More
-      </button>
+      </Link>
     </div>
   );
 };

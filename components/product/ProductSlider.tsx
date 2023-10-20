@@ -14,7 +14,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ products, title }) => {
         {title}
       </p>
       <div>
-        <Slide products={products} />
+        <Slide products={products} slug={title.replaceAll(" ", "-").toLowerCase()} />
       </div>
     </div>
   );

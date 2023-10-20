@@ -3,6 +3,7 @@ export const NewArrivals: Product[] = [
   {
     id: 1,
     name: "Sleek Laptop",
+    slug: "Sleek Laptop",
     price: 1200.99,
     imageUrl: "https://picsum.photos/250/250?random=1.webp",
     desc:
@@ -19,6 +20,7 @@ export const NewArrivals: Product[] = [
   {
     id: 2,
     name: "Wireless Earbuds",
+    slug: "Wireless Earbuds",
     price: 59.99,
     imageUrl: "https://picsum.photos/250/250?random=2.webp",
     desc: "High-quality sound with noise cancellation feature.",
@@ -26,6 +28,7 @@ export const NewArrivals: Product[] = [
   {
     id: 3,
     name: "Smartphone Pro",
+    slug: "Smartphone Pro",
     price: 999.99,
     imageUrl: "https://picsum.photos/250/250?random=3.webp",
     desc: "Latest smartphone with advanced camera features.",
@@ -33,6 +36,7 @@ export const NewArrivals: Product[] = [
   {
     id: 4,
     name: "Gaming Keyboard",
+    slug: "Gaming Keyboard",
     price: 85.0,
     imageUrl: "https://picsum.photos/250/250?random=4.webp",
     desc: "RGB gaming keyboard with mechanical switches.",
@@ -40,6 +44,7 @@ export const NewArrivals: Product[] = [
   {
     id: 5,
     name: "Smartwatch Series 5",
+    slug: "Smartwatch Series 5",
     price: 299.99,
     imageUrl: "https://picsum.photos/250/250?random=5.webp",
     desc: "Advanced smartwatch with fitness tracking capabilities.",
@@ -47,6 +52,7 @@ export const NewArrivals: Product[] = [
   {
     id: 6,
     name: "4K HDR Monitor",
+    slug: "4K HDR Monitor",
     price: 499.99,
     imageUrl: "https://picsum.photos/250/250?random=6.webp",
     desc: "Monitor with crisp resolution suitable for gaming and design.",
@@ -54,6 +60,7 @@ export const NewArrivals: Product[] = [
   {
     id: 7,
     name: "Wireless Charging Pad",
+    slug: "Wireless Charging Pad",
     price: 29.99,
     imageUrl: "https://picsum.photos/250/250?random=7.webp",
     desc: "Quick wireless charging for all compatible devices.",
@@ -61,6 +68,7 @@ export const NewArrivals: Product[] = [
   {
     id: 8,
     name: "VR Headset Elite",
+    slug: "VR Headset Elite",
     price: 349.99,
     imageUrl: "https://picsum.photos/250/250?random=8.webp",
     desc: "Experience virtual reality like never before.",
@@ -68,6 +76,7 @@ export const NewArrivals: Product[] = [
   {
     id: 9,
     name: "Portable SSD 1TB",
+    slug: "Portable SSD 1TB",
     price: 149.99,
     imageUrl: "https://picsum.photos/250/250?random=9.webp",
     desc: "Fast data transfer with large storage capacity.",
@@ -75,6 +84,7 @@ export const NewArrivals: Product[] = [
   {
     id: 10,
     name: "Gaming Mouse",
+    slug: "Gaming Mouse",
     price: 55.0,
     imageUrl: "https://picsum.photos/250/250?random=10.webp",
     desc: "High DPI gaming mouse with customizable buttons.",
@@ -85,6 +95,7 @@ export const PopularProducts: Product[] = [
   {
     id: 11,
     name: "Classic Watch",
+    slug: "Classic Watch",
     price: 250.75,
     imageUrl: "https://picsum.photos/250/250?random=11.webp",
     desc: "A classic watch with leather straps.",
@@ -92,6 +103,7 @@ export const PopularProducts: Product[] = [
   {
     id: 12,
     name: "Elegant Necklace",
+    slug: "Elegant Necklace",
     price: 175.0,
     imageUrl: "https://picsum.photos/250/250?random=12.webp",
     desc: "A beautifully designed necklace with gemstones.",
@@ -99,6 +111,7 @@ export const PopularProducts: Product[] = [
   {
     id: 13,
     name: "Stylish Sunglasses",
+    slug: "Stylish Sunglasses",
     price: 80.99,
     imageUrl: "https://picsum.photos/250/250?random=13.webp",
     desc: "Protect your eyes in style with these UV-protected sunglasses.",
@@ -106,6 +119,7 @@ export const PopularProducts: Product[] = [
   {
     id: 14,
     name: "Designer Handbag",
+    slug: "Designer Handbag",
     price: 299.99,
     imageUrl: "https://picsum.photos/250/250?random=14.webp",
     desc: "A luxury handbag that complements any outfit.",
@@ -113,6 +127,7 @@ export const PopularProducts: Product[] = [
   {
     id: 15,
     name: "Fashionable Heels",
+    slug: "Fashionable Heels",
     price: 120.5,
     imageUrl: "https://picsum.photos/250/250?random=15.webp",
     desc: "Elevate your look with these chic high heels.",
@@ -120,6 +135,7 @@ export const PopularProducts: Product[] = [
   {
     id: 16,
     name: "Casual Sneakers",
+    slug: "Casual Sneakers",
     price: 60.0,
     imageUrl: "https://picsum.photos/250/250?random=16.webp",
     desc: "Comfortable and stylish sneakers for daily wear.",
@@ -127,6 +143,7 @@ export const PopularProducts: Product[] = [
   {
     id: 17,
     name: "Trendy Earrings",
+    slug: "Trendy Earrings",
     price: 40.99,
     imageUrl: "https://picsum.photos/250/250?random=17.webp",
     desc: "A pair of earrings that add sparkle to any outfit.",
@@ -134,6 +151,7 @@ export const PopularProducts: Product[] = [
   {
     id: 18,
     name: "Chic Scarf",
+    slug: "Chic Scarf",
     price: 25.0,
     imageUrl: "https://picsum.photos/250/250?random=18.webp",
     desc: "A soft scarf perfect for chilly evenings.",
@@ -141,6 +159,7 @@ export const PopularProducts: Product[] = [
   {
     id: 19,
     name: "Men's Leather Belt",
+    slug: "Men's Leather Belt",
     price: 45.0,
     imageUrl: "https://picsum.photos/250/250?random=19.webp",
     desc: "Durable and stylish leather belt for men.",
@@ -148,6 +167,7 @@ export const PopularProducts: Product[] = [
   {
     id: 20,
     name: "Women's Bracelet",
+    slug: "Women's Bracelet",
     price: 65.99,
     imageUrl: "https://picsum.photos/250/250?random=20.webp",
     desc: "A delicate bracelet to adorn your wrist.",
@@ -158,6 +178,7 @@ export const TopDeals: Product[] = [
   {
     id: 21,
     name: "Sports Shoes",
+    slug: "Sports Shoes",
     price: 85.5,
     imageUrl: "https://picsum.photos/250/250?random=21.webp",
     desc: "Comfortable sports shoes suitable for all terrains.",
@@ -165,6 +186,7 @@ export const TopDeals: Product[] = [
   {
     id: 22,
     name: "Mountain Bicycle",
+    slug: "Mountain Bicycle",
     price: 150.0,
     imageUrl: "https://picsum.photos/250/250?random=22.webp",
     desc: "Ride through the hills with this robust mountain bicycle.",
@@ -172,6 +194,7 @@ export const TopDeals: Product[] = [
   {
     id: 23,
     name: "Travel Backpack",
+    slug: "Travel Backpack",
     price: 45.99,
     imageUrl: "https://picsum.photos/250/250?random=23.webp",
     desc: "Spacious and durable backpack ideal for travel.",
@@ -179,6 +202,7 @@ export const TopDeals: Product[] = [
   {
     id: 24,
     name: "Camping Tent",
+    slug: "Camping Tent",
     price: 120.0,
     imageUrl: "https://picsum.photos/250/250?random=24.webp",
     desc: "Weather-resistant camping tent for outdoor adventures.",
@@ -186,6 +210,7 @@ export const TopDeals: Product[] = [
   {
     id: 25,
     name: "Binoculars Pro",
+    slug: "Binoculars Pro",
     price: 70.0,
     imageUrl: "https://picsum.photos/250/250?random=25.webp",
     desc: "Clear vision binoculars perfect for bird-watching.",
@@ -193,6 +218,7 @@ export const TopDeals: Product[] = [
   {
     id: 26,
     name: "Trail Running Shoes",
+    slug: "Trail Running Shoes",
     price: 90.0,
     imageUrl: "https://picsum.photos/250/250?random=26.webp",
     desc: "Shoes designed for stability and grip on trails.",
@@ -200,6 +226,7 @@ export const TopDeals: Product[] = [
   {
     id: 27,
     name: "Waterproof Jacket",
+    slug: "Waterproof Jacket",
     price: 99.99,
     imageUrl: "https://picsum.photos/250/250?random=27.webp",
     desc: "Stay dry in rainy conditions with this breathable jacket.",
@@ -207,6 +234,7 @@ export const TopDeals: Product[] = [
   {
     id: 28,
     name: "Camping Stove",
+    slug: "Camping Stove",
     price: 50.0,
     imageUrl: "https://picsum.photos/250/250?random=28.webp",
     desc: "Portable stove for your outdoor cooking needs.",
@@ -214,6 +242,7 @@ export const TopDeals: Product[] = [
   {
     id: 29,
     name: "Fishing Rod",
+    slug: "Fishing Rod",
     price: 60.0,
     imageUrl: "https://picsum.photos/250/250?random=29.webp",
     desc: "Durable fishing rod for freshwater and saltwater fishing.",
@@ -221,6 +250,7 @@ export const TopDeals: Product[] = [
   {
     id: 30,
     name: "Hiking Hat",
+    slug: "Hiking Hat",
     price: 25.0,
     imageUrl: "https://picsum.photos/250/250?random=30.webp",
     desc: "Protect yourself from the sun during your hikes.",

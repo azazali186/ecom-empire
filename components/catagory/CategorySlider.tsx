@@ -14,7 +14,7 @@ const CategorySlider: React.FC<CategorySliderProps> = ({ category, title }) => {
         {title}
       </p>
       <div>
-        <Slide categories={category} />
+        <Slide categories={category} slug={title} />
       </div>
     </div>
   );

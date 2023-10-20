@@ -4,10 +4,12 @@ import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import Image from "next/image";
+import Link from "next/link";
 // components/ProductCard.tsx
 export type Product = {
   id: number;
   name: string;
+  slug: string;
   price?: number;
   imageUrl: string;
   desc?: string;
@@ -36,9 +38,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         )}
       </div>
       <div className="bg-orange-100 back min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
+        <Link href={`/products/${product.slug.toLowerCase().replaceAll(" ", "-")}`}>
         <p className="w-48 flex justify-center items-center h-48 mb-5 text-orange-400 font-bold divide-y-8 overflow-y-auto no-scrollbar">
           {product.desc}
         </p>
+        </Link>
         {product.price ? (
           <div className="flex justify-center items-center gap-2">
             <Button variant="outlined" className="cart-buy-btn hover:scale-105">
