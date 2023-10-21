@@ -23,10 +23,12 @@ const Header = () => {
             />
           </Link>
         </div>
-        <h1 className="cursor-pointer hover:scale-110 text-xl">
+        <h1 className="cursor-pointer hover:scale-110 ml-5 text-xl">
           <Link href={"/"}>Ecom Empire</Link>
         </h1>
-        <div className="flex gap-5 justify-center items-center ml-20 ">
+      </div>
+      <div className="right flex">
+        <div className="flex gap-8 justify-center text-sm items-center mr-20 ">
           <div className="cursor-pointer hover:scale-125">
             <Link href={"/auth/login"}>Login</Link>
           </div>
@@ -37,9 +39,7 @@ const Header = () => {
             <Link href={"/become-a-seller"}>Become A Seller</Link>
           </div>
         </div>
-      </div>
-      <div className="right">
-        <ul className="flex gap-5 justify-center items-center">
+        <ul className="flex gap-5 text-sm justify-center items-center">
           <li className="cursor-pointer hover:scale-125 ">
             <LocationOnIcon />
           </li>
@@ -59,13 +59,13 @@ const Header = () => {
           </li>
           <li className="cursor-pointer">
             <div className="flex justify-center items-center">
-            <Image
-              src="https://picsum.photos/seed/picsum/200/300"
-              alt="logo"
-              className="w-[40px] h-[40px] rounded-full"
-              width={40}
-              height={40}
-            />
+              <Image
+                src="https://picsum.photos/seed/picsum/200/300"
+                alt="logo"
+                className="w-[40px] h-[40px] rounded-full"
+                width={40}
+                height={40}
+              />
             </div>
           </li>
         </ul>

@@ -17,7 +17,7 @@ type CategoryCardProps = {
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
   return (
-    <div className="bg-orange-100 front min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
+    <div className="bg-orange-100 text-sm front min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
       <Link
         href={`/catagories/${category.slug.toLowerCase().replaceAll(" ", "-")}`}
       >
@@ -28,7 +28,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
           width="186"
           height="186"
         />
-        <h3 className="text-lg mt-2">{category.name}</h3>
+        <h3 className="text-base mt-2">{category.name}</h3>
       </Link>
     </div>
   );

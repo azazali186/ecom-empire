@@ -12,7 +12,7 @@ const Slide: React.FC<SlideProps> = ({ products, slug }) => {
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
-      <Link href={`/tags/${slug}`} className="p-4 bg-orange-400 text-orange-50 self-center">
+      <Link href={`/tags/${slug}`} className="p-4 bg-orange-400 rounded-lg text-orange-50 self-center">
         View More
       </Link>
     </div>

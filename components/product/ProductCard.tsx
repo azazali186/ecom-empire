@@ -23,14 +23,14 @@ type ProductCardProps = {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <div className="flipper h-full">
+    <div className="flipper h-full text-sm">
       <div className="bg-orange-100 front min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
         <Image
           src={product.imageUrl}
           alt={product.name}
           className="w-48 h-48 object-cover rounded-t-md" width="186" height="186"
         />
-        <h3 className="text-lg mt-2">{product.name}</h3>
+        <h3 className="text-base mt-2">{product.name}</h3>
           <p className="text-orange-400 flex justify-between items-center font-bold">
             <span>${product?.price?.toFixed(2)}</span>
             <span className="gap-2 flex"><FavoriteIcon />{ product.likes || 0 }</span>
