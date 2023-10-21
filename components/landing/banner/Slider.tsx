@@ -37,7 +37,7 @@ const Slider: React.FC<SliderProps> = ({ images, autoplayInterval = 3000, styles
           key={index}
           src={img}
           alt=""
-          className={`absolute top-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out ${
+          className={` object-cover	 absolute top-0 w-full h-full transition-transform duration-1000 ease-in-out ${
             index === currentIndex ? "translate-x-0" : "translate-x-full"
           }`}
         />

@@ -7,14 +7,24 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import Image from "next/image";
 import Link from "next/link";
 // components/ProductCard.tsx
+export type Ratings = {
+  rate: number;
+  count: number;
+};
 export type Product = {
   id: number;
-  name: string;
-  slug: string;
+  title: string;
+  slug?: string;
   price?: number;
-  imageUrl: string;
-  desc?: string;
+  thumbnail: string;
+  images: string[];
+  description?: string;
   likes?: number;
+  rating?: string;
+  discountPercentage: number;
+  stock: number;
+  brand: string;
+  category: string;
 };
 
 type ProductCardProps = {
@@ -22,29 +32,62 @@ type ProductCardProps = {
 };
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const isSmallScreen = useMediaQuery('(max-width:600px)');
-  const defaultClass = "bg-orange-100 min-w-fit p-4 my-4 shadow-lg rounded-md cursor-pointer"
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const defaultClass =
+    "bg-orange-100 min-w-fit p-4 my-4 shadow-lg rounded-md cursor-pointer";
+  const title =
+    product.title.length > 30
+      ? product.title.substring(0, 30) + "..."
+      : product.title;
 
   return (
     <div className="flipper h-full text-sm">
-      <div className={ isSmallScreen ? defaultClass +" front " : defaultClass + " front mr-6 "}>
+      <div
+        className={
+          isSmallScreen
+            ? defaultClass + " front "
+            : defaultClass + " front mr-6 "
+        }
+      >
         <Image
-          src={product.imageUrl}
-          alt={product.name}
-          className="w-48 h-48 object-cover rounded-t-md" width="186" height="186"
+          src={product?.thumbnail}
+          alt={title}
+          className="w-48 h-48 object-cover rounded-t-md"
+          width="186"
+          height="186"
         />
-        <h3 className="text-base mt-2">{product.name}</h3>
-          <p className="text-orange-400 flex justify-between items-center font-bold">
+        <h3 className="text-xs mt-2">{title}</h3>
+        <p className="text-orange-400 text-xs flex justify-between items-center font-bold">
+          <span>
             <span>${product?.price?.toFixed(2)}</span>
-            <span className="gap-2 flex"><FavoriteIcon />{ product.likes || 0 }</span>
-            
-          </p>
-      </div>
-      <div className={  isSmallScreen ? defaultClass +" back " : defaultClass + " back mr-6 "}>
-        <Link href={`/products/${product.slug.toLowerCase().replaceAll(" ", "-")}`}>
-        <p className="w-48 flex justify-center items-center h-48 mb-5 text-orange-400 font-bold divide-y-8 overflow-y-auto no-scrollbar">
-          {product.desc}
+            {product.discountPercentage > 0 && (
+              <span className=" ml-2" title="">
+                {product.discountPercentage > 0
+                  ? "off " +product.discountPercentage.toFixed(2)
+                  : product.discountPercentage.toFixed(2)}
+                %
+              </span>
+            )}
+          </span>
+          <span className="gap-2 flex justify-between items-center">
+            <FavoriteIcon />
+            {product?.rating || 0}
+          </span>
         </p>
+      </div>
+      <div
+        className={
+          isSmallScreen ? defaultClass + " back " : defaultClass + " back mr-6 "
+        }
+      >
+        <Link
+          href={`/products/${
+            product?.slug?.toLowerCase().replaceAll(" ", "-") || product.id
+          }`}
+        >
+          <p className="w-48 flex justify-center items-center h-48 mb-5 text-orange-400 font-bold divide-y-8 overflow-y-auto no-scrollbar">
+            {product.description}
+          </p>
         </Link>
         {product.price ? (
           <div className="flex justify-center items-center gap-2">
@@ -64,4 +107,3 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
-

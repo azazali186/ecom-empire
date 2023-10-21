@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import CategorySlider from "@/components/catagory/CategorySlider";
+import { getRandomProducts } from "@/components/common/helper";
 import { categoryData } from "@/components/data/categoryData";
 import {
   NewArrivals,
@@ -10,6 +11,7 @@ import Banner from "@/components/landing/banner/Banner";
 import SideBanner from "@/components/landing/banner/SideBanner";
 import TopBanner from "@/components/landing/top-banner/TopBanner";
 import MainLayout from "@/components/layouts";
+import { Product } from "@/components/product/ProductCard";
 import ProductSlider from "@/components/product/ProductSlider";
 import { useMediaQuery } from "@mui/material";
 import React from "react";
@@ -38,7 +40,7 @@ const index: React.FC<LandingPageProps> = ({ data }) => {
       <div className="flex px-5">
         <SideBanner
           images={longImageLeft}
-          styles={{ height: "auto", width : isSmallScreen ? "100%" : "15%" }}
+          styles={{ height: "auto", width: isSmallScreen ? "100%" : "15%" }}
           sliderStyles={{ height: "100%" }}
         />
         <div className="flex flex-col">
@@ -76,7 +78,7 @@ const index: React.FC<LandingPageProps> = ({ data }) => {
         </div>
         <SideBanner
           images={longImageRight}
-          styles={{ height: "auto", width : isSmallScreen ? "100%" : "15%" }}
+          styles={{ height: "auto", width: isSmallScreen ? "100%" : "15%" }}
           sliderStyles={{ height: "100%" }}
         />
       </div>
@@ -84,11 +86,18 @@ const index: React.FC<LandingPageProps> = ({ data }) => {
   );
 };
 
+
+
 export async function getServerSideProps() {
+
+  const newProducts = await (await fetch("https://dummyjson.com/products?limit=11&skip=11")).json()
+  const popProducts = await (await fetch("https://dummyjson.com/products?limit=11&skip=22")).json()
+  const topProducts = await (await fetch("https://dummyjson.com/products?limit=11&skip=33")).json()
+
   const data = {
-    NewArrivals,
-    PopularProducts,
-    TopDeals,
+    NewArrivals: newProducts.products,
+    PopularProducts: popProducts.products,
+    TopDeals: topProducts.products,
     categoryData,
   };
   return { props: { data } };
