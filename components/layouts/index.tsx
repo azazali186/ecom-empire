@@ -9,7 +9,7 @@ const MainLayout: any = ({ children }) => {
     <>
       <div className=" bg-orange-50  h-screen">
         <Header />
-        <div className={isSmallScreen ? "scrollable-container h-[90vh]" : "scrollable-container h-[80vh]"}>{children}</div>
+        <div className={isSmallScreen ? "scrollable-container h-[90vh]" : "scrollable-container h-[82vh]"}>{children}</div>
         <Footer />
       </div>
     </>
