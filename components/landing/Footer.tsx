@@ -1,10 +1,14 @@
+import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const mainClass = "flex justify-center flex-col px-5 py-2 mt-2 items-center absolute bottom-0 w-full font-bold bg-orange-400 text-orange-50"
   return (
-    <div className="flex justify-center flex-col px-5 py-2 mt-2 h-[100px] items-center absolute bottom-0 w-full font-bold bg-orange-400 text-orange-50">
-      <div className="flex justify-between w-full px-10">
+    <div className={isSmallScreen ? mainClass + " h-[35px] " : mainClass + " h-[100px] "} >
+      {!isSmallScreen && (
+        <div className="flex justify-between w-full px-10">
         <div className="flex flex-col w-[25%] ">
           <h1 className="text-center capitalize font-bold text-sm cursor-pointer hover:scale-110 scale-105">Sellers Terms</h1>
           <div className="flex justify-between">
@@ -43,6 +47,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      )}
       <div className="absolute text-sm py-2 capitalize bottom-0">@2023 Ecom Empire</div>
     </div>
   );

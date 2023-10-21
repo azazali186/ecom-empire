@@ -8,7 +8,7 @@ type SlideProps = {
 
 const Slide: React.FC<SlideProps> = ({ products, slug }) => {
   return (
-    <div className="flex flex-wrap overflow-x-auto">
+    <div className="flex justify-center flex-wrap overflow-x-auto">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

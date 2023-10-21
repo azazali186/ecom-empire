@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Button } from "@mui/material";
+import { Button, useMediaQuery } from "@mui/material";
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
@@ -22,9 +22,12 @@ type ProductCardProps = {
 };
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const defaultClass = "bg-orange-100 min-w-fit p-4 my-4 shadow-lg rounded-md cursor-pointer"
+
   return (
     <div className="flipper h-full text-sm">
-      <div className="bg-orange-100 front min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
+      <div className={ isSmallScreen ? defaultClass +" front " : defaultClass + " front mr-6 "}>
         <Image
           src={product.imageUrl}
           alt={product.name}
@@ -37,7 +40,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             
           </p>
       </div>
-      <div className="bg-orange-100 back min-w-fit p-4 my-4 mr-6 shadow-lg rounded-md cursor-pointer">
+      <div className={  isSmallScreen ? defaultClass +" back " : defaultClass + " back mr-6 "}>
         <Link href={`/products/${product.slug.toLowerCase().replaceAll(" ", "-")}`}>
         <p className="w-48 flex justify-center items-center h-48 mb-5 text-orange-400 font-bold divide-y-8 overflow-y-auto no-scrollbar">
           {product.desc}
@@ -61,3 +64,4 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
