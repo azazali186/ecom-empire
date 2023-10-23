@@ -48,3 +48,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.text-10{
+  font-size: 8px;
+}

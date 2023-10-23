@@ -15,7 +15,7 @@ export type Product = {
   id: number;
   title: string;
   slug?: string;
-  price?: number;
+  price: number;
   thumbnail: string;
   images: string[];
   description?: string;
@@ -40,6 +40,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       ? product.title.substring(0, 30) + "..."
       : product.title;
 
+      const getPrice = () => {
+        const price = ((100 - product.discountPercentage) * product.price ) / 100
+        return price
+      }
+
   return (
     <div className="flipper h-full text-sm">
       <div
@@ -58,16 +63,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         />
         <h3 className="text-xs mt-2">{title}</h3>
         <p className="text-orange-400 text-xs flex justify-between items-center font-bold">
-          <span>
-            <span>${product?.price?.toFixed(2)}</span>
-            {product.discountPercentage > 0 && (
+          <span className="flex gap-5 items-center">
+          <span className="flex flex-col">
+              <span className="text-10"><span className="line-through ">${product.price}</span> {product.discountPercentage > 0 && (
               <span className=" ml-2" title="">
                 {product.discountPercentage > 0
-                  ? "off " +product.discountPercentage.toFixed(2)
+                  ? "Off " +product.discountPercentage.toFixed(2)
                   : product.discountPercentage.toFixed(2)}
                 %
               </span>
-            )}
+            )}</span>
+                <span>${getPrice().toFixed(2)}</span>
+              </span>
+            
           </span>
           <span className="gap-2 flex justify-between items-center">
             <FavoriteIcon />
